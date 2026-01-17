@@ -26,7 +26,20 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-2. Run the sentiment script (uses defaults if no args provided):
+2. Create the `data/` folder and add the provided dataset
+
+If the repository doesn't already contain a `data/` folder, create it and copy the provided dataset into it. The example dataset filename is `dataset_B_news_subset_3500.csv`.
+
+```bash
+# create the folder (if missing) and copy the dataset file
+mkdir -p data
+# On Windows (PowerShell)
+Copy-Item ..\path\to\dataset_B_news_subset_3500.csv data\
+# On macOS / Linux
+cp /path/to/dataset_B_news_subset_3500.csv data/
+```
+
+3. Run the sentiment script (uses defaults if no args provided):
 
 ```bash
 # Run with default inputs from config/default_inputs.json (or repo root default_inputs.json)
